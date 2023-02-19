@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/subCategoryRowItem"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    tools:ignore="UseCompoundDrawables">
+
+    <ImageView
+        android:id="@+id/subCategoryImageView"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_gravity="center"
+        android:background="@drawable/circle_shadow_background"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/ic_logo" />
+
+    <TextView
+        android:id="@+id/subCategoryNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_2sdp"
+        android:text="Electrician"
+        android:textAppearance="@style/RegularFont10"
+        android:textColor="@color/black" />
+</LinearLayout>

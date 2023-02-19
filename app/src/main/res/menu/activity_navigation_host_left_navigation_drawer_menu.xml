@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/homeFragment"
+            android:checked="true"
+            android:icon="@drawable/ic_navigation_drawer_home"
+            android:title="@string/navigation_host_navigation_drawer_menu_home" />
+
+        <item
+            android:id="@+id/bookingsFragment"
+            android:checked="true"
+            android:icon="@drawable/ic_navigation_drawer_refer_and_earn"
+            android:title="@string/navigation_host_navigation_drawer_menu_refer_earn" />
+
+        <item
+            android:id="@+id/walletFragment"
+            android:checked="true"
+            android:icon="@drawable/ic_navigation_drawer_about_us"
+            android:title="@string/navigation_host_navigation_drawer_menu_about_us" />
+
+        <item
+            android:id="@+id/profileFragment"
+            android:checked="true"
+            android:icon="@drawable/ic_navigation_drawer_contact_us"
+            android:title="@string/navigation_host_navigation_drawer_menu_contact_us"/>
+    </group>
+</menu>

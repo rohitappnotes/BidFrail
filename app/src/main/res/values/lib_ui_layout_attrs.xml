@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="lib_ui_layout_ShadowLayout">
+        <attr name="lib_ui_layout_sl_shadowed" format="boolean" />
+        <attr name="lib_ui_layout_sl_shadowDistance" format="dimension" />
+        <attr name="lib_ui_layout_sl_shadowAngle" format="integer" />
+        <attr name="lib_ui_layout_sl_shadowRadius" format="dimension" />
+        <attr name="lib_ui_layout_sl_shadowColor" format="color" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.bidfrail.android.ui.navigationhost.fragment.home.view.HomeFragment"
+        android:label="@string/navigation_host_bottom_navigation_menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_serviceFragment"
+            app:destination="@id/serviceFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookingsFragment"
+        android:name="com.bidfrail.android.ui.navigationhost.fragment.bookings.view.BookingsFragment"
+        android:label="@string/navigation_host_bottom_navigation_menu_bookings"
+        tools:layout="@layout/fragment_bookings">
+    </fragment>
+
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.bidfrail.android.ui.navigationhost.fragment.wallet.view.WalletFragment"
+        android:label="@string/navigation_host_bottom_navigation_menu_wallet"
+        tools:layout="@layout/fragment_wallet">
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.bidfrail.android.ui.navigationhost.fragment.profile.view.ProfileFragment"
+        android:label="@string/navigation_host_bottom_navigation_menu_profile"
+        tools:layout="@layout/fragment_profile">
+    </fragment>
+
+    <fragment
+        android:id="@+id/serviceFragment"
+        android:name="com.bidfrail.android.ui.navigationhost.fragment.service.view.ServiceFragment"
+        android:label="{subCategoryName}"
+        tools:layout="@layout/fragment_service">
+
+        <argument
+            android:name="subCategoryName"
+            app:argType="string" />
+
+        <argument
+            android:name="subCategory"
+            app:argType="com.bidfrail.android.model.SubCategory" />
+
+        <action
+            android:id="@+id/action_serviceFragment_to_subServiceFragment"
+            app:destination="@id/subServiceFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/subServiceFragment"
+        android:name="com.bidfrail.android.ui.navigationhost.fragment.subservice.view.SubServiceFragment"
+        android:label="{serviceName}"
+        tools:layout="@layout/fragment_sub_service">
+
+        <argument
+            android:name="serviceName"
+            app:argType="string" />
+
+        <argument
+            android:name="service"
+            app:argType="com.bidfrail.android.model.Service" />
+    </fragment>
+</navigation>

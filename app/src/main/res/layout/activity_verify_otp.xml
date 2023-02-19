@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/verifyOTPActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.verifyotp.view.VerifyOTPActivity">
+
+    <RelativeLayout
+        android:id="@+id/customAppBarRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/navigationIconImageView"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:focusable="true"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_left_arrow_black" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/navigationIconImageView"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text=""
+            android:textAppearance="@style/BoldFont14"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customAppBarRelativeLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/contentLinearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/guidelineHorizontalBottom"
+                app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+                app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+                app:layout_constraintTop_toBottomOf="@id/guidelineHorizontalTop">
+
+                <ImageView
+                    android:id="@+id/headerImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/_10sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_logo" />
+
+                <TextView
+                    android:id="@+id/headingTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:text="@string/verify_otp_label_verification_code"
+                    android:textAppearance="@style/BoldFont18"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/labelTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:justificationMode="inter_word"
+                    android:lineSpacingExtra="0dp"
+                    android:text="@string/verify_otp_label_enter_6_digit_code_sent_to_your_phone"
+                    android:textAppearance="@style/MediumFont10"
+                    android:textColor="@color/black" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/sentToTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="@string/verify_otp_label_sent_to"
+                        android:textAppearance="@style/BoldFont10"
+                        android:textColor="#C20114" />
+
+                    <TextView
+                        android:id="@+id/sentToPhoneNumberTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_toEndOf="@id/sentToTextView"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="@string/verify_otp_label_default_phone_number_sent_to"
+                        android:textAppearance="@style/MediumFont10" />
+                </RelativeLayout>
+
+                <com.library.pinview.PinView
+                    android:id="@+id/pinView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:cursorVisible="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:includeFontPadding="false"
+                    android:inputType="number"
+                    android:lineSpacingExtra="0dp"
+                    android:textAppearance="@style/MediumFont12"
+                    android:textColor="@color/pin_view_text_colors"
+                    app:cursorColor="@color/pin_view_line_selected"
+                    app:cursorWidth="@dimen/_1sdp"
+                    app:itemCount="6"
+                    app:itemHeight="@dimen/_40sdp"
+                    app:itemRadius="@dimen/_2sdp"
+                    app:itemSpacing="@dimen/_2sdp"
+                    app:itemWidth="@dimen/_40sdp"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+                    app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+                    app:layout_constraintTop_toBottomOf="@+id/sentToHeadingTextView"
+                    app:lineColor="@color/pin_view_line_colors"
+                    app:lineWidth="@dimen/_1sdp"
+                    app:viewType="rectangle" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/continueButton"
+                    style="@style/RoundedButton_Icon_Red"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:gravity="start|center"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:text="@string/verify_otp_button_continue"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/BoldFont16"
+                    app:icon="@drawable/ic_right_arrow_maroon"
+                    app:iconGravity="end"
+                    app:iconPadding="@dimen/_5sdp"
+                    app:iconSize="@dimen/_30sdp"
+                    app:iconTint="@null" />
+
+                <LinearLayout
+                    android:id="@+id/reSendCodeLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+                    app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+                    app:layout_constraintTop_toBottomOf="@+id/verifyButton">
+
+                    <TextView
+                        android:id="@+id/reSendCodeMessageTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/verify_otp_label_resend_code_in"
+                        android:textAppearance="@style/RegularFont10"
+                        android:textColor="@color/colorLabel" />
+
+                    <TextView
+                        android:id="@+id/reSendCodeLinkOrTimerTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@drawable/link_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/verify_otp_label_resend_timer"
+                        android:textAppearance="@style/BoldFont10"
+                        android:textColor="@color/colorLink"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineHorizontalTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/_8sdp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineHorizontalBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_end="@dimen/_8sdp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineVerticalStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/_8sdp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineVerticalEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/_8sdp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/progressDialog"
+        layout="@layout/please_wait_progress_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

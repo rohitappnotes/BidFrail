@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/homeFragment"
+        android:checked="true"
+        android:icon="@drawable/ic_bottom_navigation_home"
+        android:title="@string/navigation_host_bottom_navigation_menu_home" />
+
+    <item
+        android:id="@+id/bookingsFragment"
+        android:checked="true"
+        android:icon="@drawable/ic_bottom_navigation_bookings"
+        android:title="@string/navigation_host_bottom_navigation_menu_bookings" />
+
+    <item
+        android:id="@+id/empty"
+        android:enabled="false"
+        tools:ignore="MenuTitle"/>
+
+    <item
+        android:id="@+id/walletFragment"
+        android:checked="true"
+        android:icon="@drawable/ic_bottom_navigation_wallet"
+        android:title="@string/navigation_host_bottom_navigation_menu_wallet" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:checked="true"
+        android:icon="@drawable/ic_bottom_navigation_profile"
+        android:title="@string/navigation_host_bottom_navigation_menu_profile" />
+</menu>

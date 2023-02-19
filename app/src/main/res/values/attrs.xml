@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="shadow_general_shadow_elevation" format="dimension" />
+    <attr name="shadow_general_shadow_alpha" format="float" />
+
+    <!-- 同时指定四个方向的圆角大小 -->
+    <attr name="shadow_radius" format="dimension"/>
+    <attr name="shadow_borderColor" format="color"/>
+    <attr name="shadow_borderWidth" format="dimension"/>
+
+    <declare-styleable name="QMUILayout">
+        <attr name="android:maxWidth"/>
+        <attr name="android:maxHeight"/>
+        <attr name="android:minWidth"/>
+        <attr name="android:minHeight"/>
+        <attr name="shadow_bottomDividerHeight" format="dimension"/>
+        <attr name="shadow_bottomDividerColor" format="color|reference"/>
+        <attr name="shadow_bottomDividerInsetLeft" format="dimension"/>
+        <attr name="shadow_bottomDividerInsetRight" format="dimension"/>
+        <attr name="shadow_topDividerHeight" format="dimension"/>
+        <attr name="shadow_topDividerColor" format="color|reference"/>
+        <attr name="shadow_topDividerInsetLeft" format="dimension"/>
+        <attr name="shadow_topDividerInsetRight" format="dimension"/>
+        <attr name="shadow_leftDividerWidth" format="dimension"/>
+        <attr name="shadow_leftDividerColor" format="color|reference"/>
+        <attr name="shadow_leftDividerInsetTop" format="dimension"/>
+        <attr name="shadow_leftDividerInsetBottom" format="dimension"/>
+        <attr name="shadow_rightDividerWidth" format="dimension"/>
+        <attr name="shadow_rightDividerColor" format="color|reference"/>
+        <attr name="shadow_rightDividerInsetTop" format="dimension"/>
+        <attr name="shadow_rightDividerInsetBottom" format="dimension"/>
+        <attr name="shadow_radius"/>
+        <attr name="shadow_borderColor"/>
+        <attr name="shadow_borderWidth"/>
+        <attr name="shadow_outerNormalColor" format="color|reference"/>
+        <attr name="shadow_hideRadiusSide" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="top" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="bottom" value="3"/>
+            <enum name="left" value="4"/>
+        </attr>
+        <attr name="shadow_showBorderOnlyBeforeL" format="boolean"/>
+        <attr name="shadow_shadowElevation" format="dimension"/>
+        <attr name="shadow_useThemeGeneralShadowElevation" format="boolean"/>
+        <attr name="shadow_shadowAlpha" format="float"/>
+        <attr name="shadow_shadowColor" format="color|reference"/>
+        <attr name="shadow_outlineInsetTop" format="dimension"/>
+        <attr name="shadow_outlineInsetLeft" format="dimension"/>
+        <attr name="shadow_outlineInsetRight" format="dimension"/>
+        <attr name="shadow_outlineInsetBottom" format="dimension"/>
+        <attr name="shadow_outlineExcludePadding" format="boolean"/>
+    </declare-styleable>
+
+</resources>

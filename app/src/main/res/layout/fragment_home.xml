@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/serviceFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.navigationhost.fragment.service.view.ServiceFragment">
+
+    <LinearLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.library.sliderview.SliderView
+            android:id="@+id/subCategorySliderView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            app:sliderAnimationDuration="600"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderAutoCycleEnabled="true"
+            app:sliderIndicatorAnimationDuration="600"
+            app:sliderIndicatorEnabled="true"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMargin="@dimen/_10sdp"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="@dimen/_3sdp"
+            app:sliderIndicatorRadius="@dimen/_2sdp"
+            app:sliderIndicatorSelectedColor="@color/colorLink"
+            app:sliderIndicatorUnselectedColor="#FAA5A4A4"
+            app:sliderScrollTimeInSec="3"
+            app:sliderStartAutoCycle="true" />
+
+        <RelativeLayout
+            android:id="@+id/categoriesWithSubCategoryRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/categoriesWithSubCategoryHeadingTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_toStartOf="@+id/categoriesWithSubCategorySeeAllTextView"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Categories"
+                android:textAppearance="@style/BoldFont14"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/categoriesWithSubCategorySeeAllTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:text="See all"
+                android:textAppearance="@style/MediumFont10"
+                android:textColor="@color/colorLink" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categoryRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fastScrollEnabled="true"
+            android:orientation="horizontal"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="horizontal"
+            android:splitMotionEvents="false" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/subCategoryAccordingToCategoryRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fastScrollEnabled="true"
+            android:orientation="horizontal"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="horizontal"
+            android:splitMotionEvents="false" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/offerMaterialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:elevation="4dp"
+            app:cardBackgroundColor="#E9E9E9"
+            app:cardCornerRadius="@dimen/_4sdp"
+            app:contentPadding="0dp">
+
+            <com.library.sliderview.SliderView
+                android:id="@+id/offerSliderView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_130sdp"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorEnabled="true"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="@dimen/_10sdp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="@dimen/_3sdp"
+                app:sliderIndicatorRadius="@dimen/_2sdp"
+                app:sliderIndicatorSelectedColor="@color/colorLink"
+                app:sliderIndicatorUnselectedColor="#FAA5A4A4"
+                app:sliderScrollTimeInSec="3"
+                app:sliderStartAutoCycle="true" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/topBiddingCategoryHeadingTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Top Bidding Services"
+            android:textAppearance="@style/BoldFont14"
+            android:textColor="@color/black" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/topBiddingCategoryRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fastScrollEnabled="true"
+            android:orientation="horizontal"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="horizontal"
+            android:splitMotionEvents="false" />
+
+        <RelativeLayout
+            android:id="@+id/newlyLaunchedCategoryRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/newlyLaunchedCategoryHeadingTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_toStartOf="@+id/newlyLaunchedCategorySeeAllTextView"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Newly Launched Services"
+                android:textAppearance="@style/BoldFont14"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/bidCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newlyLaunchedCategoryHeadingTextView"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="449+ Bids were made recently!"
+                android:textAppearance="@style/RegularFont10"
+                android:textColor="@color/black"
+                app:drawableStartCompat="@drawable/ic_increase" />
+
+            <TextView
+                android:id="@+id/newlyLaunchedCategorySeeAllTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:text="See all"
+                android:textAppearance="@style/MediumFont10"
+                android:textColor="@color/colorLink" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/newlyLaunchedCategoryRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fastScrollEnabled="true"
+            android:orientation="horizontal"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="horizontal"
+            android:splitMotionEvents="false" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/referEarnMaterialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:elevation="4dp"
+            app:cardBackgroundColor="#E9E9E9"
+            app:cardCornerRadius="@dimen/_4sdp"
+            app:contentPadding="0dp">
+
+            <com.library.sliderview.SliderView
+                android:id="@+id/referEarnSliderView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_130sdp"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorEnabled="true"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="@dimen/_10sdp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="@dimen/_3sdp"
+                app:sliderIndicatorRadius="@dimen/_2sdp"
+                app:sliderIndicatorSelectedColor="@color/colorLink"
+                app:sliderIndicatorUnselectedColor="#FAA5A4A4"
+                app:sliderScrollTimeInSec="3"
+                app:sliderStartAutoCycle="true" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <RelativeLayout
+            android:id="@+id/trendingSubCategoryRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/trendingSubCategoryHeadingTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_toStartOf="@+id/trendingSubCategorySeeAllTextView"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Trending services"
+                android:textAppearance="@style/BoldFont14"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/trendingSubCategorySeeAllTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:text="See all"
+                android:textAppearance="@style/MediumFont10"
+                android:textColor="@color/colorLink" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/trendingSubCategoryRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fastScrollEnabled="true"
+            android:orientation="vertical"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:splitMotionEvents="false"
+            android:verticalScrollbarPosition="right" />
+
+        <ImageView
+            android:id="@+id/covidBannerImageView"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_180sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/covid_banner" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

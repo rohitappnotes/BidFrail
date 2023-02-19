@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/serviceRowItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:orientation="vertical"
+    tools:ignore="UseCompoundDrawables">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/serviceMaterialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_2sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        app:cardCornerRadius="@dimen/_8sdp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="false"
+        app:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/serviceImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/fan" />
+
+        <ProgressBar
+            android:id="@+id/imageLoadingProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/serviceNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_2sdp"
+        android:text="Fan"
+        android:textAppearance="@style/BoldFont10"
+        android:textColor="@color/black" />
+</LinearLayout>
